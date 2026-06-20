@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Auto Hub — Drive Your Dream Today</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- SIDEBAR NAV -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <span class="logo-icon">⬡</span>
+    <span class="logo-text">Auto<span class="gold">Hub</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#home"        class="nav-link active" data-section="home">
+      <span class="nav-icon">🏠</span><span class="nav-label">Home</span>
+    </a>
+    <a href="#cars"        class="nav-link" data-section="cars">
+      <span class="nav-icon">🚗</span><span class="nav-label">Car Types</span>
+    </a>
+    <a href="#booking"     class="nav-link" data-section="booking">
+      <span class="nav-icon">📅</span><span class="nav-label">Booking</span>
+    </a>
+    <a href="#market"      class="nav-link" data-section="market">
+      <span class="nav-icon">📈</span><span class="nav-label">Market</span>
+    </a>
+    <a href="#information" class="nav-link" data-section="information">
+      <span class="nav-icon">ℹ️</span><span class="nav-label">Information</span>
+    </a>
+    <a href="#contact"     class="nav-link" data-section="contact">
+      <span class="nav-icon">📞</span><span class="nav-label">Contact</span>
+    </a>
+  </nav>
+  <div class="sidebar-footer">
+    <p>© 2025 Auto Hub</p>
+    <p>Drive Your Dream Today</p>
+  </div>
+</aside>
+
+<!-- MOBILE HEADER -->
+<header class="mobile-header">
+  <div class="mobile-logo">
+    <span class="logo-icon">⬡</span>
+    <span class="logo-text">Auto<span class="gold">Hub</span></span>
+  </div>
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<!-- OVERLAY -->
+<div class="overlay" id="overlay"></div>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+
+  <!-- ═══════════ HOME ═══════════ -->
+  <section id="home" class="section hero-section">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Welcome to Auto Hub</p>
+      <h1 class="hero-title">Drive Your<br/><span class="gold">Dream</span> Today</h1>
+      <p class="hero-subtitle">From electric vehicles to rugged SUVs, luxury sedans to high-performance sports cars — find your perfect match at Auto Hub.</p>
+      <div class="hero-cta">
+        <a href="#booking" class="btn btn-primary">Book a Test Drive</a>
+        <a href="#cars" class="btn btn-outline">Explore Cars</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">500+</span><span class="stat-label">Cars Available</span></div>
+        <div class="stat"><span class="stat-num">15K+</span><span class="stat-label">Happy Customers</span></div>
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Brands</span></div>
+        <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">Support</span></div>
+      </div>
+    </div>
+    <div class="hero-car-art">
+      <div class="car-silhouette">🚘</div>
+      <div class="car-glow"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CAR TYPES ═══════════ -->
+  <section id="cars" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">Our Fleet</p>
+      <h2 class="section-title">Types of <span class="gold">Cars</span></h2>
+      <p class="section-sub">Every driving style has its perfect vehicle. Discover our full range.</p>
+    </div>
+
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="sedan">Sedan</button>
+      <button class="filter-btn" data-filter="suv">SUV</button>
+      <button class="filter-btn" data-filter="electric">Electric</button>
+      <button class="filter-btn" data-filter="sports">Sports</button>
+      <button class="filter-btn" data-filter="luxury">Luxury</button>
+      <button class="filter-btn" data-filter="truck">Truck</button>
+    </div>
+
+    <div class="cars-grid" id="carsGrid">
+
+      <div class="car-card" data-type="sedan">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="Sedan" class="car-img" loading="lazy"/>
+          <span class="car-badge">Sedan</span>
+        </div>
+        <div class="car-info">
+          <h3>Executive Sedan</h3>
+          <p>Smooth rides, spacious interiors, and fuel efficiency — perfect for daily commutes and long drives.</p>
+          <div class="car-specs">
+            <span>⚡ 180 HP</span><span>🛣️ 20 km/L</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹12L – ₹25L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Sedan')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="suv">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80" alt="SUV" class="car-img" loading="lazy"/>
+          <span class="car-badge suv">SUV</span>
+        </div>
+        <div class="car-info">
+          <h3>Rugged SUV</h3>
+          <p>Conquer every terrain with commanding road presence, high ground clearance, and 7-seat capacity.</p>
+          <div class="car-specs">
+            <span>⚡ 250 HP</span><span>🛣️ 14 km/L</span><span>💺 7 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹18L – ₹60L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('SUV')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="electric">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80" alt="Electric" class="car-img" loading="lazy"/>
+          <span class="car-badge electric">Electric</span>
+        </div>
+        <div class="car-info">
+          <h3>Electric Vehicle</h3>
+          <p>Zero emissions, instant torque, and cutting-edge tech. The future of driving is here.</p>
+          <div class="car-specs">
+            <span>⚡ 300 HP</span><span>🔋 500 km range</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹22L – ₹80L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Electric')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="sports">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&q=80" alt="Sports Car" class="car-img" loading="lazy"/>
+          <span class="car-badge sports">Sports</span>
+        </div>
+        <div class="car-info">
+          <h3>Sports Car</h3>
+          <p>Feel the rush. High-performance engines, aerodynamic design, and precision handling for thrill seekers.</p>
+          <div class="car-specs">
+            <span>⚡ 450 HP</span><span>🏎️ 0–100 in 3.5s</span><span>💺 2 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹50L – ₹2Cr</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Sports Car')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="luxury">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1617788138017-80ad40651399?w=600&q=80" alt="Luxury Car" class="car-img" loading="lazy"/>
+          <span class="car-badge luxury">Luxury</span>
+        </div>
+        <div class="car-info">
+          <h3>Luxury Sedan</h3>
+          <p>Handcrafted interiors, advanced driver assists, and unmatched prestige for those who demand the best.</p>
+          <div class="car-specs">
+            <span>⚡ 350 HP</span><span>🛣️ 16 km/L</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹60L – ₹3Cr</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Luxury Sedan')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="truck">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80" alt="Pickup Truck" class="car-img" loading="lazy"/>
+          <span class="car-badge truck">Truck</span>
+        </div>
+        <div class="car-info">
+          <h3>Pickup Truck</h3>
+          <p>Built for work and adventure. Maximum payload, towing capacity, and all-terrain reliability.</p>
+          <div class="car-specs">
+            <span>⚡ 380 HP</span><span>🏋️ 3T Tow</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹25L – ₹55L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Pickup Truck')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="suv">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=600&q=80" alt="Compact SUV" class="car-img" loading="lazy"/>
+          <span class="car-badge suv">SUV</span>
+        </div>
+        <div class="car-info">
+          <h3>Compact SUV</h3>
+          <p>City-friendly yet versatile. Great fuel economy with the elevated stance and space of an SUV.</p>
+          <div class="car-specs">
+            <span>⚡ 160 HP</span><span>🛣️ 18 km/L</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹10L – ₹22L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Compact SUV')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="electric">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1571068316344-75bc76f77890?w=600&q=80" alt="Electric SUV" class="car-img" loading="lazy"/>
+          <span class="car-badge electric">Electric</span>
+        </div>
+        <div class="car-info">
+          <h3>Electric SUV</h3>
+          <p>Combine the versatility of an SUV with all-electric efficiency. Smart, sustainable, and powerful.</p>
+          <div class="car-specs">
+            <span>⚡ 400 HP</span><span>🔋 600 km range</span><span>💺 7 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹45L – ₹1.2Cr</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Electric SUV')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-card" data-type="sedan">
+        <div class="car-img-wrap">
+          <img src="https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80" alt="Compact Sedan" class="car-img" loading="lazy"/>
+          <span class="car-badge">Sedan</span>
+        </div>
+        <div class="car-info">
+          <h3>Compact Hatchback</h3>
+          <p>Nimble, economical, and easy to park. Perfect for urban commuters looking for value and efficiency.</p>
+          <div class="car-specs">
+            <span>⚡ 90 HP</span><span>🛣️ 22 km/L</span><span>💺 5 Seats</span>
+          </div>
+          <div class="car-price-row">
+            <span class="car-price">₹5L – ₹12L</span>
+            <button class="btn btn-sm" onclick="scrollToBooking('Hatchback')">Book Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ BOOKING ═══════════ -->
+  <section id="booking" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">Reserve Your Ride</p>
+      <h2 class="section-title">Book a <span class="gold">Test Drive</span></h2>
+      <p class="section-sub">Fill in your details and we'll have your dream car ready for you.</p>
+    </div>
+
+    <div class="booking-container">
+      <div class="booking-form-wrap">
+        <form class="booking-form" id="bookingForm" onsubmit="submitBooking(event)">
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name *</label>
+              <input type="text" id="fullName" placeholder="Rahul Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+91 9XXXXXXXXX" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" placeholder="rahul@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="city">City *</label>
+              <input type="text" id="city" placeholder="New Delhi" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="carType">Car Type *</label>
+              <select id="carType" required>
+                <option value="">Select a type</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Hatchback">Hatchback</option>
+                <option value="SUV">SUV</option>
+                <option value="Compact SUV">Compact SUV</option>
+                <option value="Electric">Electric Vehicle</option>
+                <option value="Electric SUV">Electric SUV</option>
+                <option value="Sports Car">Sports Car</option>
+                <option value="Luxury Sedan">Luxury Sedan</option>
+                <option value="Pickup Truck">Pickup Truck</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Budget Range</label>
+              <select id="budget">
+                <option value="">Select budget</option>
+                <option>Under ₹10L</option>
+                <option>₹10L – ₹25L</option>
+                <option>₹25L – ₹50L</option>
+                <option>₹50L – ₹1Cr</option>
+                <option>Above ₹1Cr</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="testDriveDate">Preferred Test Drive Date *</label>
+            <input type="date" id="testDriveDate" required />
+          </div>
+
+          <div class="form-group">
+            <label>Preferred Time Slot</label>
+            <div class="time-slots">
+              <label class="slot-btn"><input type="radio" name="slot" value="9AM-11AM"/> 9AM – 11AM</label>
+              <label class="slot-btn"><input type="radio" name="slot" value="11AM-1PM"/> 11AM – 1PM</label>
+              <label class="slot-btn"><input type="radio" name="slot" value="2PM-4PM"/> 2PM – 4PM</label>
+              <label class="slot-btn"><input type="radio" name="slot" value="4PM-6PM"/> 4PM – 6PM</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Add-on Services</label>
+            <div class="addon-grid">
+              <label class="addon-check"><input type="checkbox" value="finance"/> 💳 Finance Consultation</label>
+              <label class="addon-check"><input type="checkbox" value="insurance"/> 🛡️ Insurance Advice</label>
+              <label class="addon-check"><input type="checkbox" value="tradeIn"/> 🔄 Trade-In Valuation</label>
+              <label class="addon-check"><input type="checkbox" value="delivery"/> 🚚 Home Delivery Option</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Additional Requirements</label>
+            <textarea id="message" rows="3" placeholder="Any specific features, colours, or requirements..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-full">Confirm Booking →</button>
+        </form>
+      </div>
+
+      <div class="booking-sidebar">
+        <div class="booking-info-card">
+          <h3>📍 Showroom Address</h3>
+          <p>Auto Hub, Connaught Place,<br/>New Delhi – 110001</p>
+        </div>
+        <div class="booking-info-card">
+          <h3>⏰ Working Hours</h3>
+          <p>Mon – Sat: 9AM – 7PM<br/>Sunday: 10AM – 5PM</p>
+        </div>
+        <div class="booking-info-card">
+          <h3>📞 Quick Call</h3>
+          <p>+91 956XXXXX05</p>
+          <a href="tel:+919560000005" class="btn btn-outline btn-sm" style="margin-top:0.75rem">Call Now</a>
+        </div>
+        <div class="booking-steps">
+          <h3>How it Works</h3>
+          <div class="step"><span class="step-num">1</span><span>Fill the booking form</span></div>
+          <div class="step"><span class="step-num">2</span><span>We confirm via call or SMS</span></div>
+          <div class="step"><span class="step-num">3</span><span>Visit showroom or get home delivery</span></div>
+          <div class="step"><span class="step-num">4</span><span>Test drive and choose your car</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ MARKET TRAJECTORY ═══════════ -->
+  <section id="market" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">Industry Insights</p>
+      <h2 class="section-title">Market <span class="gold">Trajectory</span></h2>
+      <p class="section-sub">Stay ahead with real-time automotive market trends and growth data.</p>
+    </div>
+
+    <div class="market-grid">
+
+      <div class="market-chart-card">
+        <h3>India EV Sales Growth</h3>
+        <p class="chart-sub">Units sold (in thousands) 2020–2025</p>
+        <div class="bar-chart">
+          <div class="bar-group"><div class="bar" style="height:15%"></div><span>2020</span><span class="bar-val">42K</span></div>
+          <div class="bar-group"><div class="bar" style="height:28%"></div><span>2021</span><span class="bar-val">78K</span></div>
+          <div class="bar-group"><div class="bar" style="height:45%"></div><span>2022</span><span class="bar-val">168K</span></div>
+          <div class="bar-group"><div class="bar" style="height:65%"></div><span>2023</span><span class="bar-val">290K</span></div>
+          <div class="bar-group"><div class="bar" style="height:80%"></div><span>2024</span><span class="bar-val">420K</span></div>
+          <div class="bar-group gold-bar"><div class="bar" style="height:100%"></div><span>2025</span><span class="bar-val">580K</span></div>
+        </div>
+      </div>
+
+      <div class="market-chart-card">
+        <h3>Market Share by Segment</h3>
+        <p class="chart-sub">2025 India passenger vehicle market</p>
+        <div class="donut-wrap">
+          <svg viewBox="0 0 200 200" class="donut-svg">
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#1e3a5f" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="0"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#2563EB" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="0" class="donut-suv"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#F59E0B" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="171" class="donut-sedan"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#10b981" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="296" class="donut-ev"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#8b5cf6" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="371" class="donut-sports"/>
+            <circle cx="100" cy="100" r="80" fill="none" stroke="#64748b" stroke-width="40" stroke-dasharray="502" stroke-dashoffset="421" class="donut-other"/>
+          </svg>
+          <div class="donut-center"><span class="donut-big">100%</span><span>Market</span></div>
+        </div>
+        <div class="donut-legend">
+          <span class="legend-item" style="--c:#2563EB">SUV 34%</span>
+          <span class="legend-item" style="--c:#F59E0B">Sedan 25%</span>
+          <span class="legend-item" style="--c:#10b981">EV 15%</span>
+          <span class="legend-item" style="--c:#8b5cf6">Sports 10%</span>
+          <span class="legend-item" style="--c:#64748b">Other 16%</span>
+        </div>
+      </div>
+
+      <div class="market-stat-card">
+        <div class="mstat"><span class="mstat-num gold">₹3.2T</span><span class="mstat-label">India Auto Market Size 2025</span></div>
+        <div class="mstat"><span class="mstat-num" style="color:#10b981">+18%</span><span class="mstat-label">YoY Growth Rate</span></div>
+        <div class="mstat"><span class="mstat-num" style="color:#2563EB">42%</span><span class="mstat-label">EV Adoption by 2030 Target</span></div>
+        <div class="mstat"><span class="mstat-num" style="color:#a78bfa">₹5,000Cr</span><span class="mstat-label">Govt EV Subsidy Committed</span></div>
+      </div>
+
+      <div class="market-trend-card">
+        <h3>Key Trends</h3>
+        <div class="trend-item">
+          <span class="trend-icon">🔋</span>
+          <div><strong>EV Revolution</strong><p>Electric vehicles are the fastest-growing segment with 38% YoY increase in India.</p></div>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">📱</span>
+          <div><strong>Connected Cars</strong><p>Over 60% of new car buyers prioritize in-car tech and smartphone integration.</p></div>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">🌿</span>
+          <div><strong>Sustainability Push</strong><p>Hybrid vehicles up 52% as consumers balance eco-awareness with range concerns.</p></div>
+        </div>
+        <div class="trend-item">
+          <span class="trend-icon">🤖</span>
+          <div><strong>ADAS Adoption</strong><p>Advanced driver assistance systems now standard in 70% of vehicles above ₹20L.</p></div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ INFORMATION ═══════════ -->
+  <section id="information" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">About Us</p>
+      <h2 class="section-title">Auto Hub <span class="gold">Information</span></h2>
+      <p class="section-sub">Everything you need to know about buying, financing, and owning your dream car.</p>
+    </div>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-icon">🏆</div>
+        <h3>About Auto Hub</h3>
+        <p>Founded with a passion for automobiles, Auto Hub is India's trusted multi-brand car dealership. From budget hatchbacks to ultra-luxury sedans, we offer 500+ vehicles across 50+ brands. Our certified experts guide you every step of the way.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">💳</div>
+        <h3>Finance & EMI</h3>
+        <p>Get competitive loan rates starting at 7.9% p.a. with EMIs starting ₹5,000/month. We partner with 15+ banks and NBFCs. Our finance team processes approvals in as little as 2 hours.</p>
+        <ul class="info-list">
+          <li>Zero down payment options available</li>
+          <li>Flexible tenures: 12 – 84 months</li>
+          <li>Pre-approved loans for CIBIL 750+</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🛡️</div>
+        <h3>Insurance</h3>
+        <p>Drive with confidence. We offer comprehensive car insurance through top providers at the best market rates. Claims assistance is provided 24/7 by our dedicated team.</p>
+        <ul class="info-list">
+          <li>Third-party & comprehensive policies</li>
+          <li>Add-on covers: zero dep, roadside assist</li>
+          <li>Instant policy issuance at delivery</li>
+        </ul>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🔄</div>
+        <h3>Trade-In / Exchange</h3>
+        <p>Upgrade your old car with our transparent trade-in program. Get a fair market valuation in 30 minutes, and apply the value directly toward your new vehicle purchase.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">🚗</div>
+        <h3>After-Sales Service</h3>
+        <p>Auto Hub's certified service centers offer scheduled maintenance, warranty repairs, and genuine parts across Delhi NCR. Free first service included with every purchase.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-icon">📜</div>
+        <h3>Documentation</h3>
+        <p>Required documents for purchase: Aadhaar, PAN, address proof, income proof (for finance). Our team handles all RTO paperwork, registration, and number plate delivery.</p>
+      </div>
+    </div>
+
+    <div class="info-cta-banner">
+      <h3>Visit Our Showroom</h3>
+      <p>Experience 500+ cars in person. No pressure, just passion for automobiles.</p>
+      <div>
+        <a href="#booking" class="btn btn-primary">Book a Visit</a>
+        <a href="https://gamma.app/docs/From-electric-vehicles-to-rugged-SUVs-luxury-sedans-to-high-perfo-l8gycapahc8xcq5" target="_blank" class="btn btn-outline">Visit Our Website ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact" class="section">
+    <div class="section-header">
+      <p class="section-eyebrow">Get In Touch</p>
+      <h2 class="section-title">Contact <span class="gold">Us</span></h2>
+      <p class="section-sub">We're here to help you find your perfect drive.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-details">
+        <div class="contact-card">
+          <span class="contact-icon">📞</span>
+          <div>
+            <h4>Phone</h4>
+            <a href="tel:+919560000005">+91 956XXXXX05</a>
+            <p>Mon – Sat, 9AM – 7PM</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">🌐</span>
+          <div>
+            <h4>Website</h4>
+            <a href="https://gamma.app/docs/From-electric-vehicles-to-rugged-SUVs-luxury-sedans-to-high-perfo-l8gycapahc8xcq5" target="_blank">Auto Hub Website ↗</a>
+            <p>Explore our full catalogue</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📍</span>
+          <div>
+            <h4>Showroom</h4>
+            <p>Auto Hub, Connaught Place,<br/>New Delhi – 110001</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">⏰</span>
+          <div>
+            <h4>Working Hours</h4>
+            <p>Mon – Sat: 9:00 AM – 7:00 PM<br/>Sunday: 10:00 AM – 5:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-card">
+          <span class="contact-icon">📧</span>
+          <div>
+            <h4>Email</h4>
+            <a href="mailto:hello@autohub.in">hello@autohub.in</a>
+            <p>Response within 24 hours</p>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="#" class="social-btn">📘 Facebook</a>
+          <a href="#" class="social-btn">📸 Instagram</a>
+          <a href="#" class="social-btn">🐦 Twitter</a>
+          <a href="#" class="social-btn">▶️ YouTube</a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <form class="contact-form" onsubmit="submitContact(event)">
+          <h3>Send Us a Message</h3>
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" placeholder="Rahul Sharma" required />
+          </div>
+          <div class="form-group">
+            <label>Phone / Email</label>
+            <input type="text" placeholder="+91 9XXXXXXXXX or email@example.com" required />
+          </div>
+          <div class="form-group">
+            <label>Topic</label>
+            <select>
+              <option>Test Drive Enquiry</option>
+              <option>Price Quote</option>
+              <option>Finance Enquiry</option>
+              <option>Service & Maintenance</option>
+              <option>Trade-In Valuation</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="4" placeholder="How can we help you?"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- BOOKING SUCCESS TOAST -->
+<div class="toast" id="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
