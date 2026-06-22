@@ -1,0 +1,23 @@
+# ========================================================================
+#                     Auto Hub - Requirements List
+# ========================================================================
+# 
+# This is a static frontend web application and does not require server-side 
+# package management (such as python pip, npm node_modules, or ruby gems) 
+# to run the application itself.
+#
+# Minimum Requirements:
+# ---------------------
+# - Any modern Web Browser (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge)
+# - HTML5 & CSS3 support
+# - ES6 JavaScript support (enabled by default in modern browsers)
+#
+# Optional Development Tools:
+# ---------------------------
+# - Local Web Server (e.g., VS Code Live Server extension, Python http.server, or local NGINX/Apache)
+#   Command to run a local server (Python 3):
+#   python -m http.server 8000
+#
+#   Access at: http://localhost:8000/
+# 
+# ========================================================================
