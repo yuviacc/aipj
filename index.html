@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+<script>
+  (function() {
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-theme');
+    }
+  })();
+</script>
 
 <!-- SIDEBAR NAV -->
 <aside class="sidebar" id="sidebar">
@@ -37,6 +44,13 @@
       <span class="nav-icon">📞</span><span class="nav-label">Contact</span>
     </a>
   </nav>
+  <div class="sidebar-theme-toggle">
+    <span class="toggle-label">Theme</span>
+    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle Theme">
+      <span class="theme-btn-icon">🌙</span>
+      <span class="theme-btn-text">Dark Mode</span>
+    </button>
+  </div>
   <div class="sidebar-footer">
     <p>© 2025 Auto Hub</p>
     <p>Drive Your Dream Today</p>
@@ -49,9 +63,14 @@
     <span class="logo-icon">⬡</span>
     <span class="logo-text">Auto<span class="gold">Hub</span></span>
   </div>
-  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="mobile-header-actions">
+    <button class="theme-toggle-mobile-btn" id="themeToggleMobileBtn" aria-label="Toggle Theme">
+      <span class="theme-btn-icon">🌙</span>
+    </button>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </header>
 
 <!-- OVERLAY -->

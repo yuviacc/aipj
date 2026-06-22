@@ -29,6 +29,15 @@
   --transition: 0.25s ease;
 }
 
+body.light-theme {
+  --bg:       #F8FAFC;
+  --surface:  #FFFFFF;
+  --surface2: #F1F5F9;
+  --text:     #0F172A;
+  --muted:    #64748B;
+  --border:   rgba(15, 23, 42, 0.08);
+}
+
 html { scroll-behavior: smooth; font-size: 16px; }
 
 body {
@@ -38,6 +47,15 @@ body {
   min-height: 100vh;
   display: flex;
   overflow-x: hidden;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* Global transitions for theme elements */
+.sidebar, .mobile-header, .booking-form-wrap, .booking-info-card, .booking-steps,
+.market-chart-card, .market-stat-card, .market-trend-card, .info-card, .contact-card,
+.social-btn, .contact-form-wrap, .car-card, .nav-link, .btn-outline, .filter-btn,
+.slot-btn, .addon-check, input, select, textarea, .step-num, .sidebar-logo, .sidebar-footer {
+  transition: background var(--transition), border-color var(--transition), color var(--transition), transform var(--transition), box-shadow var(--transition);
 }
 
 .gold { color: var(--gold); }
@@ -118,6 +136,45 @@ body {
 
 .nav-icon { font-size: 1.1rem; }
 
+/* ─── SIDEBAR THEME TOGGLE ─── */
+.sidebar-theme-toggle {
+  padding: 1.25rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sidebar-theme-toggle .toggle-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.theme-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(37,99,235,0.1);
+  border-color: var(--blue);
+}
+
 .sidebar-footer {
   padding: 1.25rem 1.5rem;
   border-top: 1px solid var(--border);
@@ -138,6 +195,29 @@ body {
   justify-content: space-between;
   padding: 0 1rem;
   z-index: 200;
+}
+
+.mobile-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.theme-toggle-mobile-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 6px;
+  color: var(--text);
+  transition: color var(--transition), transform var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.theme-toggle-mobile-btn:hover {
+  transform: scale(1.1);
 }
 
 .hamburger {
@@ -1092,4 +1172,20 @@ body {
   .info-grid { grid-template-columns: 1fr; }
   .section-title { font-size: 1.8rem; }
   .hero-title { font-size: 2.8rem; }
+}
+
+/* ─── LIGHT THEME OVERRIDES ─── */
+body.light-theme .hero-grid {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+}
+
+body.light-theme .hero-gradient {
+  background: radial-gradient(ellipse 80% 80% at 60% 50%, rgba(37,99,235,0.08) 0%, transparent 70%),
+              radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245,158,11,0.06) 0%, transparent 60%);
+}
+
+body.light-theme .donut-svg circle[stroke="#1e3a5f"] {
+  stroke: var(--surface2);
 }
