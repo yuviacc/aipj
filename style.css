@@ -394,11 +394,14 @@ body {
   animation: carSlide 1.2s ease-out forwards;
   opacity: 0;
 }
-
-.car-silhouette {
-  font-size: 18rem;
-  line-height: 1;
-  filter: drop-shadow(0 0 60px rgba(37,99,235,0.4));
+.hero-car-img {
+  width: 580px;
+  max-width: 90vw;
+  height: auto;
+  object-fit: contain;
+  mix-blend-mode: lighten;
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.5)) drop-shadow(0 0 40px rgba(37,99,235,0.25));
+  transition: filter var(--transition), mix-blend-mode var(--transition);
 }
 
 .car-glow {
@@ -1188,4 +1191,9 @@ body.light-theme .hero-gradient {
 
 body.light-theme .donut-svg circle[stroke="#1e3a5f"] {
   stroke: var(--surface2);
+}
+
+body.light-theme .hero-car-img {
+  filter: invert(0.9) hue-rotate(180deg) drop-shadow(0 10px 30px rgba(0,0,0,0.15));
+  mix-blend-mode: multiply;
 }
